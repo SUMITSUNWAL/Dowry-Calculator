@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const Header = () => {
   const [active,setActive] = useState("DowrAi");
   return (
-    <div className='h-16 flex justify-between items-center px-7'>
+    <div className='h-16 flex justify-between items-center px-7 shadow-lg'>
       <div>
         <div className='font-bold text-[27px]'>4<span className='text-red-600'>0</span>4<span className='text-red-600'>S</span>umi<span className='text-red-600'>t</span></div>
       </div>

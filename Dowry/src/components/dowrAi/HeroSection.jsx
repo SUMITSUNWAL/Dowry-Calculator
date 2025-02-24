@@ -77,7 +77,7 @@ const HeroSection = () => {
             </div>
             </div>
 
-            <button className='bg-black text-white text-[20px] px-16 py-2 mt-7 mb-5 ml-14 hover:shadow-lg'>Calculate Now</button>
+            <button className='bg-black text-white text-[20px] px-16 py-2 mt-7 mb-5 ml-14 hover:bg-blue-500 hover:shadow-lg'>Calculate Now</button>
 
           </div>
 

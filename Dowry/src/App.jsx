@@ -4,12 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/dowrAi/Header'
 import HeroSection from './components/dowrAi/HeroSection'
+import VisionPage from './components/vision/VisionPage'
 
 function App() {
 
   return <div>
-    <Header/>
-    <HeroSection />
+    {/* <Header/>
+    <HeroSection /> */}
+    <VisionPage />
   </div>
     
 }
