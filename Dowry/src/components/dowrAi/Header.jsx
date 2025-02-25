@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
 
-const Header = () => {
-  const [active,setActive] = useState("DowrAi");
+const Header = ({setActive,active,page}) => {
   return (
     <div className='h-16 flex justify-between items-center px-7 shadow-lg'>
       <div>
@@ -10,11 +8,19 @@ const Header = () => {
       <div>
         <ul className="flex gap-9 text-[17px]">
           <li className={`hover:border-b-2 hover:border-blue-400 hover:text-blue-400 hover:cursor-pointer ${active === "Vision" ? "border-b-2 border-blue-400 text-blue-400" : "" }`}         
-          onClick={()=> setActive("Vision") }>Vision</li>
+          onClick={()=> {
+            setActive("Vision");
+            page.current = "Vision";
+          }
+             }>Vision</li>
           <li className={`hover:border-b-2 hover:border-blue-400 hover:text-blue-400 hover:cursor-pointer ${active === "DowrAi" ? "border-b-2 border-blue-400 text-blue-400" : "" }`}
-          onClick={()=> setActive("DowrAi") }>DowrAi</li>
+          onClick={()=> {setActive("DowrAi") 
+            page.current = "DowrAi";
+          }}>DowrAi</li>
           <li className={`hover:border-b-2 hover:border-blue-400 hover:text-blue-400 hover:cursor-pointer ${active === "Contact" ? "border-b-2 border-blue-400 text-blue-400" : "" }`}
-          onClick={()=> setActive("Contact") }>Contact Anupam Mittal</li>
+          onClick={()=> {setActive("Contact")
+            page.current = "Contact";
+           }}>Contact Anupam Mittal</li>
        </ul>
       </div>
     </div>

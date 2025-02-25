@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HeroSection = () => {
+const HeroSection = ({setAModel}) => {
   return<>
     <div className='bg-color flex'>
       <div className='ml-4 w-[50%]'>
@@ -18,7 +18,7 @@ const HeroSection = () => {
             <div className='flex mt-3 justify-center items-center'>
               <div className='mr-5'>
               <div className='font-semibold text-gray-400'>Age</div>
-              <input type="text" list="ages" name="ages" placeholder='Select' className='focus:outline-none hover:cursor-pointer p-2 w-[150px] hover:border-2 border'/>
+              <input type="text" list="ages" name="ages" required placeholder='Select' className='focus:outline-none hover:cursor-pointer p-2 w-[150px] hover:border-2 border'/>
               <datalist id="ages">
                 <option value="18-30 Years" />
                 <option value="30-45 Years" />
@@ -39,7 +39,7 @@ const HeroSection = () => {
             <div className='flex mt-3 justify-center items-center'>
               <div className='mr-5'>
               <div className='font-semibold text-gray-400'>Montly Salary</div>
-              <input type="text" list="salary" name="salary" placeholder='Select' className='focus:outline-none hover:cursor-pointer p-2 w-[150px] hover:border-2 border'/>
+              <input type="text" list="salary" name="salary" placeholder='Select' required className='focus:outline-none hover:cursor-pointer p-2 w-[150px] hover:border-2 border'/>
               <datalist id="salary">
                 <option value="Less than 50k" />
                 <option value="Btw 50k to 100k" />
@@ -48,7 +48,7 @@ const HeroSection = () => {
             </div>
             <div>
               <div  className='font-semibold text-gray-400'>Education</div>
-              <input type="text" list="Education" name="Education" placeholder='Select' className='focus:outline-none hover:cursor-pointer p-2 w-[150px] hover:border-2 border' />
+              <input type="text" list="Education" name="Education" placeholder='Select' required className='focus:outline-none hover:cursor-pointer p-2 w-[150px] hover:border-2 border' />
               <datalist id="Education">
                 <option value="School" />
                 <option value="College" />
@@ -60,7 +60,7 @@ const HeroSection = () => {
             <div className='flex mt-3 justify-center items-center'>
               <div className='mr-5'>
               <div className='font-semibold text-gray-400'>Residence</div>
-              <input type="text" list="Residence" name="Residence" placeholder='Select' className='focus:outline-none hover:cursor-pointer p-2 w-[150px] hover:border-2 border'/>
+              <input type="text" list="Residence" name="Residence" placeholder='Select' required className='focus:outline-none hover:cursor-pointer p-2 w-[150px] hover:border-2 border'/>
               <datalist id="Residence">
                 <option value="Self-Owend" />
                 <option value="Rented" />
@@ -77,7 +77,7 @@ const HeroSection = () => {
             </div>
             </div>
 
-            <button className='bg-black text-white text-[20px] px-16 py-2 mt-7 mb-5 ml-14 hover:bg-blue-500 hover:shadow-lg'>Calculate Now</button>
+            <button className='bg-black text-white text-[20px] px-16 py-2 mt-7 mb-5 ml-14 hover:bg-blue-500 hover:shadow-lg' onClick={()=> setAModel(true)}>Calculate Now</button>
 
           </div>
 
